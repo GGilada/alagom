@@ -1,20 +1,645 @@
 <!doctype html>
 <html lang="he" dir="rtl">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>אלגום | One Pager מוצרים</title>
-<style>
-:root{--ink:#eef5f4;--muted:#a8b7b6;--deep:#071110;--panel:rgba(12,24,23,.82);--line:rgba(169,205,196,.2);--cyan:#46d6cf;--amber:#f0b85a;--green:#8bd47b;--red:#ff6f61;--paper:#f4f7f5;--paper-ink:#14201f;font-family:"Segoe UI",Arial,system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--deep);color:var(--ink);line-height:1.55}.hero{position:relative;min-height:88vh;display:grid;align-items:end;padding:28px clamp(20px,5vw,72px) 54px;isolation:isolate}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,17,16,.28),rgba(7,17,16,.8) 54%,rgba(7,17,16,.95)),linear-gradient(180deg,rgba(7,17,16,.08),rgba(7,17,16,.92) 92%),url("assets/alagom-ops-hero.svg") center/cover no-repeat;z-index:-2}.hero:after{content:"";position:absolute;inset:auto 0 0;height:220px;background:linear-gradient(180deg,rgba(7,17,16,0),var(--deep));z-index:-1}.nav{position:absolute;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px clamp(20px,5vw,72px)}.brand{display:flex;align-items:center;gap:12px;font-size:1.04rem;font-weight:700}.brand-mark{width:36px;height:36px;border:1px solid rgba(70,214,207,.44);background:linear-gradient(135deg,rgba(70,214,207,.22),rgba(240,184,90,.1)),#10211f;display:grid;place-items:center;border-radius:8px;color:var(--cyan);font-weight:800}.nav-meta{color:var(--muted);font-size:.92rem}.hero-content{width:min(780px,100%);padding-top:120px}.eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;color:var(--cyan);font-weight:700;font-size:.95rem}.eyebrow:before{content:"";width:38px;height:2px;background:var(--cyan)}h1{margin:0;max-width:760px;font-size:clamp(2.75rem,7vw,6.6rem);line-height:.92}h2{margin:0;font-size:clamp(2rem,4vw,3.5rem);line-height:1}.lead{max-width:660px;margin:28px 0 0;color:#d5dfde;font-size:clamp(1.05rem,2vw,1.35rem)}.hero-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:38px;max-width:820px}.metric{border:1px solid var(--line);background:rgba(7,17,16,.58);border-radius:8px;padding:14px;min-height:94px;backdrop-filter:blur(10px)}.metric strong{display:block;color:var(--ink);font-size:1.35rem;margin-bottom:4px}.metric span{color:var(--muted);font-size:.9rem}.section{padding:74px clamp(20px,5vw,72px)}.section.light{background:var(--paper);color:var(--paper-ink)}.section-inner{width:min(1180px,100%);margin:0 auto}.section-title{display:grid;grid-template-columns:minmax(0,.9fr) minmax(260px,1.1fr);gap:36px;align-items:end;margin-bottom:34px}.section-title p{margin:0;color:#5b6a68;font-size:1.08rem}.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.product{background:#fff;border:1px solid #dde5e2;border-radius:8px;padding:26px;min-height:360px;display:flex;flex-direction:column;gap:20px;box-shadow:0 18px 50px rgba(20,32,31,.08)}.product-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}.product-code{flex:0 0 auto;width:70px;height:70px;display:grid;place-items:center;border-radius:8px;background:#10211f;color:var(--cyan);font-weight:800;font-size:1.35rem}.product h3{margin:0 0 8px;font-size:1.55rem}.product .subtitle{margin:0;color:#60716e;font-weight:700}.product p{margin:0;color:#354340}.bullets{display:grid;gap:10px;margin:0;padding:0;list-style:none}.bullets li{position:relative;padding-right:20px;color:#2d3b39}.bullets li:before{content:"";position:absolute;right:0;top:.72em;width:8px;height:8px;border-radius:50%;background:var(--cyan)}.accent-amber .product-code{color:var(--amber)}.accent-amber .bullets li:before{background:var(--amber)}.accent-green .product-code{color:var(--green)}.accent-green .bullets li:before{background:var(--green)}.accent-red .product-code{color:var(--red)}.accent-red .bullets li:before{background:var(--red)}.value-band{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:center}.value-copy p{color:#c6d1cf;margin:18px 0 0;max-width:680px;font-size:1.1rem}.value-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.value-item{min-height:142px;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:20px}.value-item strong{display:block;margin-bottom:8px;color:var(--ink);font-size:1.12rem}.value-item span{color:var(--muted)}.knowledge{color:var(--ink);background:linear-gradient(135deg,rgba(70,214,207,.18),rgba(240,184,90,.12)),#0b1716}.knowledge .section-inner{display:grid;grid-template-columns:minmax(0,.85fr) minmax(280px,1.15fr);gap:46px;align-items:center}.knowledge p{margin:18px 0 0;color:#cbd7d5;font-size:1.15rem}.stack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.stack-item{border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:18px;min-height:126px;background:rgba(255,255,255,.06)}.stack-item strong{display:block;margin-bottom:6px}.stack-item span{color:#aebcba;font-size:.95rem}.footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px clamp(20px,5vw,72px);border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}@media(max-width:980px){.hero{min-height:820px}.hero-grid,.products,.value-band,.knowledge .section-inner,.section-title{grid-template-columns:1fr}.hero-grid,.value-list,.stack{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.nav{align-items:flex-start;flex-direction:column}.hero{min-height:760px;padding-bottom:36px}.hero-grid,.value-list,.stack{grid-template-columns:1fr}.product{padding:20px}.product-head{flex-direction:column}.product-code{width:58px;height:58px;font-size:1.1rem}.footer{align-items:flex-start;flex-direction:column}}
-</style>
-</head>
-<body>
-<header class="hero"><div class="nav"><div class="brand"><div class="brand-mark">A</div><span>אלגום</span></div><div class="nav-meta">פלטפורמות מודיעין, חישה ותמונת מצב מבצעית</div></div><div class="hero-content"><p class="eyebrow">ONE PAGER מוצרים</p><h1>האצת החלטות מבצעיות בזמן אמת</h1><p class="lead">משפחת פתרונות אלגום מחברת בין מחקר, חיזוי, היתוך מידע ותמונת מצב אווירית כדי לאפשר זיהוי מהיר, תיעוד אמין וניהול תהליכי הפעלת כוח על בסיס מידע עדכני ורב-ממדי.</p><div class="hero-grid"><div class="metric"><strong>זמן אמת</strong><span>זיהוי, התרעה ותיעוד בקצב מבצעי</span></div><div class="metric"><strong>AI</strong><span>אוטומציה, חיזוי ופענוח BDA מהיר</span></div><div class="metric"><strong>Geo</strong><span>היתוך מידע גיאוגרפי רב-ממדי</span></div><div class="metric"><strong>Ops</strong><span>תמונת מצב מותאמת למשתמשי קצה</span></div></div></div></header>
-<main><section class="section light"><div class="section-inner"><div class="section-title"><h2>מוצרים מרכזיים</h2><p>כל מוצר נותן מענה לשלב אחר בשרשרת הערך המבצעית: ממחקר ואיסוף, דרך פענוח וחיזוי, ועד הבנת פריסת אויב וגילוי איומים אוויריים.</p></div><div class="products">
-<article class="product"><div class="product-head"><div><h3>רה"צ</h3><p class="subtitle">פלטפורמת מחקר זמן-אמת</p></div><div class="product-code">רה"צ</div></div><p>מערכת לניהול אופרטציות חיפוש מידע מתקדם ומהיר, המאפשרת זיהוי, מחקר ותיעוד מידע לצורך התנעת תהליכי הפעלת כוח וניהולם בזמן אמת.</p><ul class="bullets"><li>עיבוד מאות אובייקטים בשנייה והעברתם במאות חתכי משתמש לזיהוי אירועים לדיווח.</li><li>לוגיקה דינאמית וחקירה דיאגרפית לניהול התראות ותור אירועים.</li><li>שכבות מתעדכנות וכלי חיפוש לעיבוד תמונת מצב מהירה לפי חתכי משתמש משתנים.</li><li>כלים ליבוא, שיקוף ועדכון שכבות מידע במבנה נתונים משתנה ובזמן קצר.</li></ul></article>
-<article class="product accent-amber"><div class="product-head"><div><h3>תנצבה</h3><p class="subtitle">חיזוי ופענוח BDA מבוסס AI</p></div><div class="product-code">AI</div></div><p>טכנולוגיה מבוססת בינה מלאכותית ליצירת תחזיות מבצעיות על תמונת הקרב בהקשר ודאות הפגיעה במטרה, מניתוח ברמת המטרה ועד הערכת הישג ואפקטיביות האש.</p><ul class="bullets"><li>אלגוריתם AI המפיק תוצרי פענוח BDA באופן אוטומטי.</li><li>אפליקציה לניהול תהליך ה-BDA ושיקוף אינטראקטיבי של תמונת מצב מותאמת משתמש.</li><li>תוצר מהיר התומך בקבלת החלטות בזמן מבצעי קצר.</li><li>תהליכי אימון ולימוד המבוססים על אלפי מקרי בוחן.</li></ul></article>
-<article class="product accent-green"><div class="product-head"><div><h3>ב"א</h3><p class="subtitle">היתוך מידע גיאוגרפי ל-EOB</p></div><div class="product-code">EOB</div></div><p>מערכת להיתוך מידע גיאוגרפי רב-ממדי לטובת ניתוח Electromagnetic Order of Battle והבנת הפריסה, ההיערכות, הכוננות והלוגיקה המבצעית של מערכי ההגנה האווירית של האויב.</p><ul class="bullets"><li>איחוד שכבות מידע מרובות לתמונת EOB קוהרנטית.</li><li>ניתוח פריסה, הערכות וכוננות על בסיס הקשרים גיאוגרפיים ומבצעיים.</li><li>זיהוי לוגיקה מבצעית ותבניות פעולה של מערכי הגנה אווירית.</li><li>תמיכה במחקר עומק לצד הפקת תובנות מהירה למקבלי החלטות.</li></ul></article>
-<article class="product accent-red"><div class="product-head"><div><h3>א"כ</h3><p class="subtitle">Air Surveillance & Recognition</p></div><div class="product-code">ASR</div></div><p>פלטפורמת ASR מהדור הבא להתמודדות עם המציאות החדשה של איומים אוויריים, לטובת הגנת שמיים, גילוי, זיהוי, התרעה וליווי כוחות אוויריים ברום גבוה ונמוך.</p><ul class="bullets"><li>גילוי וזיהוי איומים ומטרות אוויריות עוינות.</li><li>התרעה וליווי כוחות אוויריים במרחבים משתנים וברומים שונים.</li><li>תחקור והפקת תובנות בזמן אמת לצורך החלטות מבצעיות מדויקות ומהירות.</li><li>ארכיטקטורה המותאמת לעומסי מידע, ריבוי מקורות וקצב אירועים גבוה.</li></ul></article>
-</div></div></section><section class="section"><div class="section-inner value-band"><div class="value-copy"><p class="eyebrow">התועלת המבצעית</p><h2>מעבר ממידע מפוזר לפעולה מנוהלת</h2><p>הפתרונות של אלגום מצמצמים את המרחק בין אירוע, מידע והחלטה. הם מאפשרים לארגון לקלוט נתונים משתנים, לייצר תמונת מצב מתעדכנת, להפעיל לוגיקות מחקר וחיזוי, ולספק למשתמש הקצה תוצר ברור בזמן הנכון.</p></div><div class="value-list"><div class="value-item"><strong>מהירות</strong><span>עיבוד, פענוח ושיקוף תוצרים בקצב שתומך במעגלי פעולה קצרים.</span></div><div class="value-item"><strong>דיוק</strong><span>חיבור בין שכבות מידע, חתכי משתמש ולוגיקות AI להקטנת רעש והבלטת אירועים חשובים.</span></div><div class="value-item"><strong>גמישות</strong><span>מבני נתונים ושכבות מידע הניתנים לעדכון, יבוא והתאמה לצרכים משתנים.</span></div><div class="value-item"><strong>שליטה</strong><span>ניהול תורים, התראות, תחקור ותיעוד כך שהידע נשאר עקיב וזמין להמשך פעולה.</span></div></div></div></section><section class="section knowledge"><div class="section-inner"><div><p class="eyebrow">שכבת בסיס</p><h2>מאגרי מידע וידע</h2><p>מאגרי מידע וידע המאפשרים טרנספורמציה דיגיטלית צה"לית בהיבטי הנגשת המידע, תוך מתן דגש לביצועים, אמינות המידע ושימוש חוזר בידע מבצעי לאורך זמן.</p></div><div class="stack"><div class="stack-item"><strong>הנגשה</strong><span>ידע זמין למשתמשים, מערכות ותהליכים מבצעיים.</span></div><div class="stack-item"><strong>אמינות</strong><span>שמירה על עקיבות, איכות מקור ותוצרי מידע ניתנים לבקרה.</span></div><div class="stack-item"><strong>ביצועים</strong><span>תכנון למענה מהיר גם תחת נפחי מידע וקצב עדכונים גבוהים.</span></div></div></div></section></main><footer class="footer"><span>אלגום | One Pager מוצרים</span><span>מודיעין, חיזוי והיתוך מידע לתמונת מצב מבצעית</span></footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>אלגום | One Pager מוצרים</title>
+    <style>
+      :root {
+        --deep: #050807;
+        --ink: #f2f6f1;
+        --muted: #9ca9a4;
+        --paper: #eff3ed;
+        --paper-2: #dfe7de;
+        --paper-ink: #111815;
+        --line: rgba(242, 246, 241, 0.16);
+        --cyan: #42d9d1;
+        --amber: #f0b75e;
+        --moss: #8eb36d;
+        --coral: #ef6858;
+        --steel: #72807b;
+        font-family: "Segoe UI", Arial, system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--deep);
+        color: var(--ink);
+        line-height: 1.5;
+      }
+
+      .page {
+        overflow: hidden;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 92vh;
+        display: grid;
+        grid-template-columns: minmax(320px, 0.92fr) minmax(360px, 1.08fr);
+        gap: clamp(28px, 5vw, 86px);
+        align-items: stretch;
+        padding: 28px clamp(20px, 5vw, 72px) 44px;
+        isolation: isolate;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(5, 8, 7, 0.95), rgba(5, 8, 7, 0.72) 44%, rgba(5, 8, 7, 0.36)),
+          url("assets/alagom-ops-hero.svg") left center / cover no-repeat;
+        z-index: -2;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(135deg, transparent 0 56%, rgba(66, 217, 209, 0.1) 56% 57%, transparent 57%),
+          linear-gradient(45deg, transparent 0 72%, rgba(240, 183, 94, 0.12) 72% 73%, transparent 73%);
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .nav {
+        position: absolute;
+        inset: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 24px clamp(20px, 5vw, 72px);
+        color: #dfe7de;
+        z-index: 3;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(66, 217, 209, 0.5);
+        border-radius: 2px;
+        color: var(--cyan);
+        background: rgba(5, 8, 7, 0.72);
+      }
+
+      .nav-meta {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .hero-copy {
+        align-self: end;
+        padding-top: 120px;
+        padding-bottom: 26px;
+      }
+
+      .kicker {
+        margin: 0 0 20px;
+        color: var(--cyan);
+        font-weight: 800;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0;
+        font-size: clamp(3.4rem, 8.6vw, 8.8rem);
+        line-height: 0.82;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 660px;
+        margin: 28px 0 0;
+        color: #d5ddd8;
+        font-size: clamp(1.05rem, 1.6vw, 1.32rem);
+      }
+
+      .hero-side {
+        align-self: end;
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 14px;
+        padding-bottom: 28px;
+      }
+
+      .signal {
+        min-height: 180px;
+        border: 1px solid var(--line);
+        background: rgba(8, 18, 16, 0.66);
+        backdrop-filter: blur(14px);
+        padding: 18px;
+        position: relative;
+      }
+
+      .signal.tall {
+        min-height: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .signal::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-top: 1px solid rgba(66, 217, 209, 0.22);
+        border-left: 1px solid rgba(240, 183, 94, 0.18);
+        pointer-events: none;
+      }
+
+      .signal strong {
+        display: block;
+        color: var(--ink);
+        font-size: clamp(1.8rem, 4vw, 4rem);
+        line-height: 0.9;
+      }
+
+      .signal span {
+        display: block;
+        max-width: 230px;
+        margin-top: 12px;
+        color: var(--muted);
+      }
+
+      .signal small {
+        color: var(--cyan);
+        font-weight: 800;
+      }
+
+      main {
+        background: var(--deep);
+      }
+
+      .section {
+        padding: 82px clamp(20px, 5vw, 72px);
+      }
+
+      .intro-band {
+        background: var(--paper);
+        color: var(--paper-ink);
+      }
+
+      .intro-grid {
+        width: min(1220px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 50px;
+        align-items: end;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(2.35rem, 5vw, 5.2rem);
+        line-height: 0.9;
+        letter-spacing: 0;
+      }
+
+      .intro-grid p {
+        margin: 0;
+        color: #47524e;
+        font-size: 1.13rem;
+      }
+
+      .product-river {
+        width: min(1220px, 100%);
+        margin: 0 auto;
+        display: grid;
+        gap: 22px;
+      }
+
+      .product {
+        display: grid;
+        grid-template-columns: minmax(170px, 0.45fr) minmax(0, 1fr) minmax(250px, 0.8fr);
+        gap: clamp(18px, 3vw, 42px);
+        align-items: start;
+        min-height: 260px;
+        padding: 28px 0;
+        border-top: 1px solid rgba(17, 24, 21, 0.16);
+      }
+
+      .product:nth-child(even) {
+        grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1fr) minmax(170px, 0.45fr);
+      }
+
+      .product:nth-child(even) .product-code {
+        grid-column: 3;
+      }
+
+      .product:nth-child(even) .product-copy {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .product:nth-child(even) .capabilities {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .product-code {
+        color: #101713;
+        font-size: clamp(4rem, 10vw, 9.2rem);
+        line-height: 0.78;
+        font-weight: 900;
+        text-align: right;
+      }
+
+      .product-code em {
+        display: block;
+        margin-top: 14px;
+        color: var(--steel);
+        font-size: 0.95rem;
+        font-style: normal;
+        font-weight: 800;
+      }
+
+      .product-copy {
+        background: #fff;
+        border-right: 8px solid var(--cyan);
+        padding: 28px;
+        box-shadow: 16px 20px 0 rgba(17, 24, 21, 0.08);
+      }
+
+      .product h3 {
+        margin: 0 0 10px;
+        font-size: clamp(1.7rem, 3vw, 2.6rem);
+        line-height: 1;
+      }
+
+      .product p {
+        margin: 0;
+        color: #35403c;
+      }
+
+      .capabilities {
+        display: grid;
+        gap: 9px;
+        padding-top: 16px;
+      }
+
+      .capabilities span {
+        display: block;
+        padding: 11px 14px;
+        border: 1px solid rgba(17, 24, 21, 0.18);
+        background: rgba(255, 255, 255, 0.48);
+        color: #26302c;
+        font-size: 0.96rem;
+      }
+
+      .product:nth-child(2) .product-copy {
+        border-color: var(--amber);
+      }
+
+      .product:nth-child(3) .product-copy {
+        border-color: var(--moss);
+      }
+
+      .product:nth-child(4) .product-copy {
+        border-color: var(--coral);
+      }
+
+      .value {
+        position: relative;
+        background:
+          linear-gradient(90deg, rgba(66, 217, 209, 0.08), transparent 36%),
+          #080d0c;
+      }
+
+      .value-grid {
+        width: min(1220px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+        gap: 48px;
+        align-items: center;
+      }
+
+      .value-copy p {
+        max-width: 690px;
+        margin: 20px 0 0;
+        color: #c9d2ce;
+        font-size: 1.1rem;
+      }
+
+      .value-stack {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        background: var(--line);
+      }
+
+      .value-item {
+        min-height: 168px;
+        background: #0d1715;
+        padding: 24px;
+      }
+
+      .value-item strong {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--ink);
+        font-size: 1.25rem;
+      }
+
+      .value-item span {
+        color: var(--muted);
+      }
+
+      .knowledge {
+        background: var(--paper-2);
+        color: var(--paper-ink);
+      }
+
+      .knowledge-grid {
+        width: min(1220px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+        gap: 42px;
+        align-items: center;
+      }
+
+      .knowledge p {
+        margin: 18px 0 0;
+        color: #47524e;
+        font-size: 1.13rem;
+      }
+
+      .knowledge-line {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border: 1px solid rgba(17, 24, 21, 0.18);
+      }
+
+      .knowledge-line div {
+        min-height: 170px;
+        padding: 22px;
+        border-left: 1px solid rgba(17, 24, 21, 0.14);
+        background: rgba(255, 255, 255, 0.34);
+      }
+
+      .knowledge-line div:last-child {
+        border-left: 0;
+      }
+
+      .knowledge-line strong {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.22rem;
+      }
+
+      .knowledge-line span {
+        color: #47524e;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 28px clamp(20px, 5vw, 72px);
+        color: var(--muted);
+        border-top: 1px solid var(--line);
+      }
+
+      @media (max-width: 980px) {
+        .hero,
+        .intro-grid,
+        .value-grid,
+        .knowledge-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-side {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .product,
+        .product:nth-child(even) {
+          grid-template-columns: 1fr;
+        }
+
+        .product:nth-child(even) .product-code,
+        .product:nth-child(even) .product-copy,
+        .product:nth-child(even) .capabilities {
+          grid-column: auto;
+          grid-row: auto;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .nav,
+        .footer {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .hero {
+          min-height: 760px;
+        }
+
+        .hero-side,
+        .value-stack,
+        .knowledge-line {
+          grid-template-columns: 1fr;
+        }
+
+        .signal.tall {
+          min-height: 220px;
+        }
+
+        .product-copy {
+          padding: 22px;
+          box-shadow: none;
+        }
+
+        .knowledge-line div {
+          border-left: 0;
+          border-top: 1px solid rgba(17, 24, 21, 0.14);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="nav">
+          <div class="brand">
+            <div class="brand-mark">A</div>
+            <span>אלגום</span>
+          </div>
+          <div class="nav-meta">מודיעין | חיזוי | היתוך מידע | שליטה בזמן אמת</div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="kicker">ONE PAGER מוצרים</p>
+          <h1>מערכות שמייצרות יתרון לפני שהמצב מתייצב</h1>
+          <p class="lead">
+            משפחת פתרונות אלגום מחברת בין מחקר, חיזוי, היתוך מידע ותמונת מצב אווירית כדי להפוך עומס נתונים לפעולה
+            מנוהלת, מהירה ומתועדת.
+          </p>
+        </div>
+
+        <div class="hero-side" aria-label="יכולות מרכזיות">
+          <div class="signal tall">
+            <small>REAL TIME</small>
+            <strong>4</strong>
+            <span>מוצרים משלימים לאורך שרשרת קבלת ההחלטות המבצעית.</span>
+          </div>
+          <div class="signal">
+            <small>PROCESSING</small>
+            <strong>100s</strong>
+            <span>אובייקטים בשנייה, חתכי משתמש משתנים ותורי אירועים.</span>
+          </div>
+          <div class="signal">
+            <small>AI + GEO</small>
+            <strong>BDA / EOB / ASR</strong>
+            <span>פענוח, היתוך, זיהוי ותמונת מצב בקצב מבצעי.</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section intro-band">
+          <div class="intro-grid">
+            <h2>לא עוד ארבעה כרטיסים. ארבעה מנועי פעולה.</h2>
+            <p>
+              המוצרים מוצגים כאן כזרימה מבצעית: איתור ומחקר, ודאות פגיעה, הבנת פריסת אויב, ולבסוף גילוי וליווי איומים
+              אוויריים. כל שכבה מוסיפה הקשר, קצב וביטחון החלטה.
+            </p>
+          </div>
+        </section>
+
+        <section class="section intro-band">
+          <div class="product-river">
+            <article class="product">
+              <div class="product-code">רה"צ<em>Real-time research</em></div>
+              <div class="product-copy">
+                <h3>פלטפורמת מחקר זמן-אמת</h3>
+                <p>
+                  מערכת לניהול אופרטציות חיפוש מידע מתקדם ומהיר, המאפשרת זיהוי, מחקר ותיעוד מידע לצורך התנעת תהליכי
+                  הפעלת כוח וניהולם בזמן אמת.
+                </p>
+              </div>
+              <div class="capabilities">
+                <span>עיבוד מאות אובייקטים בשנייה</span>
+                <span>חקירה דיאגרפית ותור אירועים</span>
+                <span>שכבות מתעדכנות לפי חתכי משתמש</span>
+                <span>יבוא, שיקוף ועדכון שכבות מידע</span>
+              </div>
+            </article>
+
+            <article class="product">
+              <div class="product-code">AI<em>תנצבה</em></div>
+              <div class="product-copy">
+                <h3>חיזוי ופענוח BDA מבוסס AI</h3>
+                <p>
+                  טכנולוגיה ליצירת תחזיות מבצעיות על תמונת הקרב בהקשר ודאות הפגיעה במטרה, מניתוח ברמת המטרה ועד הערכת
+                  הישג ואפקטיביות האש.
+                </p>
+              </div>
+              <div class="capabilities">
+                <span>פענוח BDA אוטומטי</span>
+                <span>ניהול תהליך BDA באפליקציה ייעודית</span>
+                <span>תוצר מהיר למשתמש הקצה</span>
+                <span>אימון ולימוד על אלפי מקרי בוחן</span>
+              </div>
+            </article>
+
+            <article class="product">
+              <div class="product-code">EOB<em>ב"א</em></div>
+              <div class="product-copy">
+                <h3>היתוך מידע גיאוגרפי רב-ממדי</h3>
+                <p>
+                  מערכת לניתוח Electromagnetic Order of Battle והבנת הפריסה, ההיערכות, הכוננות והלוגיקה המבצעית של
+                  מערכי ההגנה האווירית של האויב.
+                </p>
+              </div>
+              <div class="capabilities">
+                <span>איחוד שכבות מידע לתמונת EOB</span>
+                <span>ניתוח פריסה, הערכות וכוננות</span>
+                <span>זיהוי לוגיקה מבצעית ותבניות פעולה</span>
+                <span>מחקר עומק לצד תובנות מהירות</span>
+              </div>
+            </article>
+
+            <article class="product">
+              <div class="product-code">ASR<em>א"כ</em></div>
+              <div class="product-copy">
+                <h3>Air Surveillance & Recognition</h3>
+                <p>
+                  פלטפורמת ASR מהדור הבא להתמודדות עם איומים אוויריים, לטובת הגנת שמיים, גילוי, זיהוי, התרעה וליווי
+                  כוחות אוויריים ברום גבוה ונמוך.
+                </p>
+              </div>
+              <div class="capabilities">
+                <span>גילוי וזיהוי איומים אוויריים</span>
+                <span>התרעה וליווי כוחות ברומים שונים</span>
+                <span>תחקור ותובנות בזמן אמת</span>
+                <span>ארכיטקטורה לעומסי מידע גבוהים</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section value">
+          <div class="value-grid">
+            <div class="value-copy">
+              <p class="kicker">התועלת המבצעית</p>
+              <h2>מעבר ממידע מפוזר לפעולה מנוהלת</h2>
+              <p>
+                הפתרונות של אלגום מצמצמים את המרחק בין אירוע, מידע והחלטה. הם קולטים נתונים משתנים, מייצרים תמונת מצב
+                מתעדכנת, מפעילים לוגיקות מחקר וחיזוי, ומגישים תוצר ברור בזמן הנכון.
+              </p>
+            </div>
+            <div class="value-stack">
+              <div class="value-item"><strong>מהירות</strong><span>תוצרים בקצב שתומך במעגלי פעולה קצרים.</span></div>
+              <div class="value-item"><strong>דיוק</strong><span>הקטנת רעש והבלטת אירועים חשובים.</span></div>
+              <div class="value-item"><strong>גמישות</strong><span>שכבות מידע ומבני נתונים שניתנים לשינוי.</span></div>
+              <div class="value-item"><strong>שליטה</strong><span>ניהול תורים, התראות, תחקור ותיעוד עקיב.</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section knowledge">
+          <div class="knowledge-grid">
+            <div>
+              <p class="kicker">שכבת בסיס</p>
+              <h2>מאגרי מידע וידע</h2>
+              <p>
+                מאגרי מידע וידע המאפשרים טרנספורמציה דיגיטלית צה"לית בהיבטי הנגשת המידע, תוך מתן דגש לביצועים,
+                אמינות המידע ושימוש חוזר בידע מבצעי לאורך זמן.
+              </p>
+            </div>
+            <div class="knowledge-line">
+              <div><strong>הנגשה</strong><span>ידע זמין למשתמשים, מערכות ותהליכים מבצעיים.</span></div>
+              <div><strong>אמינות</strong><span>עקיבות, איכות מקור ותוצרי מידע ניתנים לבקרה.</span></div>
+              <div><strong>ביצועים</strong><span>מענה מהיר גם תחת נפחי מידע וקצב עדכונים גבוהים.</span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>אלגום | One Pager מוצרים</span>
+        <span>מערכות מודיעין וחיזוי לתמונת מצב מבצעית</span>
+      </footer>
+    </div>
+  </body>
 </html>
